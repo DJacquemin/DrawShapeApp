@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercice13_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-mS-Zer">
+                                <rect key="frame" x="20" y="552" width="560" height="29"/>
+                                <segments>
+                                    <segment title="rouge"/>
+                                    <segment title="bleu"/>
+                                    <segment title="vert"/>
+                                    <segment title="orange"/>
+                                    <segment title="jaune"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorSelection:" destination="BYZ-38-t0r" eventType="valueChanged" id="KdC-Hq-iLb"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aqF-aK-vL4">
+                                <rect key="frame" x="244" y="498" width="336" height="35"/>
+                                <segments>
+                                    <segment title="ligne"/>
+                                    <segment title="rectangle"/>
+                                    <segment title="cercle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="shapeSelection:" destination="BYZ-38-t0r" eventType="valueChanged" id="yLO-gP-fMM"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZE4-fj-ksh">
+                                <rect key="frame" x="20" y="502" width="112" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxT-RY-VOs">
+                                        <rect key="frame" x="27" y="0.0" width="58" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Annuler">
+                                            <color key="titleColor" red="1" green="0.02158737661" blue="0.1203606861" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dju-aH-EFY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qxT-RY-VOs" firstAttribute="centerY" secondItem="ZE4-fj-ksh" secondAttribute="centerY" id="8Lo-4v-dBr"/>
+                                    <constraint firstItem="qxT-RY-VOs" firstAttribute="centerX" secondItem="ZE4-fj-ksh" secondAttribute="centerX" id="gUx-Io-Wtg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-K6-ITY">
+                                <rect key="frame" x="132" y="498" width="112" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvm-G1-rLu">
+                                        <rect key="frame" x="30" y="2" width="52" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Refaire">
+                                            <color key="titleColor" red="0.21176470589999999" green="0.74117647060000003" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6a7-mk-CPu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dvm-G1-rLu" firstAttribute="centerX" secondItem="gfh-K6-ITY" secondAttribute="centerX" id="Qc0-sI-hPo"/>
+                                    <constraint firstItem="dvm-G1-rLu" firstAttribute="centerY" secondItem="gfh-K6-ITY" secondAttribute="centerY" id="XCW-GO-VxT"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZjM-Mz-PH0">
+                                <rect key="frame" x="18" y="452" width="564" height="31"/>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UP7-Nd-7aV" customClass="DrawingView" customModule="Exercice13_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aqF-aK-vL4" firstAttribute="leading" secondItem="gfh-K6-ITY" secondAttribute="trailing" id="0BG-kW-T0X"/>
+                            <constraint firstItem="gfh-K6-ITY" firstAttribute="leading" secondItem="ZE4-fj-ksh" secondAttribute="trailing" id="9Ie-0m-SRY"/>
+                            <constraint firstItem="ZjM-Mz-PH0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9y2-f1-4ub"/>
+                            <constraint firstItem="aqF-aK-vL4" firstAttribute="width" secondItem="fBL-mS-Zer" secondAttribute="width" multiplier="3/5" id="E40-zT-fNs"/>
+                            <constraint firstItem="ZE4-fj-ksh" firstAttribute="height" secondItem="dvm-G1-rLu" secondAttribute="height" id="EvH-57-K2G"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fBL-mS-Zer" secondAttribute="bottom" constant="20" id="MaY-7a-lrv"/>
+                            <constraint firstItem="aqF-aK-vL4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NNh-9k-EUZ"/>
+                            <constraint firstItem="ZE4-fj-ksh" firstAttribute="top" secondItem="ZjM-Mz-PH0" secondAttribute="bottom" constant="20" id="NZe-cW-QtM"/>
+                            <constraint firstItem="gfh-K6-ITY" firstAttribute="width" secondItem="aqF-aK-vL4" secondAttribute="width" multiplier="1/3" id="Nj0-sG-bUG"/>
+                            <constraint firstItem="gfh-K6-ITY" firstAttribute="height" secondItem="aqF-aK-vL4" secondAttribute="height" id="R4c-nT-X3p"/>
+                            <constraint firstItem="fBL-mS-Zer" firstAttribute="top" secondItem="gfh-K6-ITY" secondAttribute="bottom" constant="20" id="SDP-0r-6bA"/>
+                            <constraint firstItem="ZjM-Mz-PH0" firstAttribute="top" secondItem="UP7-Nd-7aV" secondAttribute="bottom" id="YDv-7Q-roi"/>
+                            <constraint firstItem="fBL-mS-Zer" firstAttribute="top" secondItem="ZE4-fj-ksh" secondAttribute="bottom" constant="20" id="ZLD-RG-cNf"/>
+                            <constraint firstItem="UP7-Nd-7aV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ift-E2-EWB"/>
+                            <constraint firstItem="fBL-mS-Zer" firstAttribute="top" secondItem="dvm-G1-rLu" secondAttribute="bottom" constant="22" id="kTL-Iv-y9k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZjM-Mz-PH0" secondAttribute="trailing" id="m7t-JE-BV0"/>
+                            <constraint firstItem="fBL-mS-Zer" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="n8z-vu-Dm9"/>
+                            <constraint firstItem="UP7-Nd-7aV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="oaj-FJ-FeX"/>
+                            <constraint firstItem="fBL-mS-Zer" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tFD-PY-Icn"/>
+                            <constraint firstItem="fBL-mS-Zer" firstAttribute="top" secondItem="aqF-aK-vL4" secondAttribute="bottom" constant="20" id="tON-nA-SJW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UP7-Nd-7aV" secondAttribute="trailing" constant="-20" id="vc1-tK-44v"/>
+                            <constraint firstItem="ZE4-fj-ksh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vnS-lw-yC4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawingView" destination="UP7-Nd-7aV" id="EPp-0Z-h03"/>
+                        <outlet property="thicknessSlider" destination="ZjM-Mz-PH0" id="Hxs-rF-3lP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="429"/>
+        </scene>
+    </scenes>
+</document>
